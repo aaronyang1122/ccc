@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>template</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link href="../addons/bsht_tbk/res/css/show_card_ret.css" rel="stylesheet" type="text/css"/>
+    <link href="../addons/bsht_tbk/res/css/show_card.css" rel="stylesheet" type="text/css"/>
+    <link href="../addons/bsht_tbk/res/css/sharepic.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="../addons/bsht_tbk/plus/dan/amazeui/css/amazeui.css">
+</head>
+
+<body>
+<div class="body-wrap">
+    <!-- 返回按钮 -->
+    <div class="kouling-back">
+        <img src="../addons/bsht_tbk/res/images/back_card.png" onclick="javascript:window.history.go(-1);"/>
+    </div>
+    <!-- / 返回按钮 -->
+
+    <!-- 分享按钮 -->
+    <div class="kouling-share">
+        <img src="../addons/bsht_tbk/res/images/share_card.png" onclick="javascript:showfxtip();"/>
+    </div>
+    <!-- / 分享按钮 -->
+
+    <!-- 弹框按钮 -->
+    <div class="kouling-share shareplus">
+        <img src="../addons/bsht_tbk/res/images/cardqr.png" onclick="javascript:sharepic();"/>
+    </div>
+    <!-- / 弹框按钮 -->
+
+    <!-- 券信息 title 等 -->
+    <div class="shop-info">
+        <span class="shop-title">Title</span>
+        <span class="shop-logo"><img src="../addons/bsht_tbk/res/images/shoplogo_card.png"/></span>
+        <div class="yhq" onclick="javascript:showthistkl(1);">
+            <span class="coupons-price"><strong>¥</strong>30</span>
+            <span class="coupons-info">券有效期</span>
+            <span class="coupons-data">2017-02-28 剩 <em id="quan_num">10</em> 张</span>
+            <span class="coupons-btn">立即领券</span>
+        </div>
+    </div>
+    <!-- / 券信息 title 等 -->
+
+    <!-- 商品价格 -->
+    <div class="item-detail-view">
+        <div class="item-wrap">
+            <a href="javascript:" class="item-detail">
+                <div class="pic">
+                    <div class="img_show am-inline-block am-gallery am-gallery-default fq-background-white" data-am-widget="gallery" data-am-gallery="{ pureview: true }">
+                        <img src="http://img.alicdn.com/imgextra/i2/2937652016/TB2XBSzXBLzQeBjSZFjXXcscpXa_!!2937652016.jpg">
+                    </div>
+                </div>
+                <div class="item-content">
+                    <div class="title">
+                        <span>美国进口 卡夫旗下Planters绅士牌零食组合 混合坚果仁233g*2罐</span>
+                    </div>
+                    <div class="tags">
+                        <span class="byTag tag">券后包邮</span>
+                        <span class="dealNum" style="font-size:0.5rem">销量 68</span>
+                    </div>
+                    <div class="price-origin">
+                        <span class="origin"><img src="../addons/bsht_tbk/res/images/istm.png" style="height: auto;max-width: 16px;padding-bottom:3px;"> 现价：¥139.60</span>
+                    </div>
+                    <div class="discount">
+                        <img class="img-tag" src="../addons/bsht_tbk/res/images/qhfee.png">
+                        <span class="sale"><em>¥</em>109.60</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- / 商品价格 -->
+
+    <!-- 商品图文详情 -->
+    <div class="am-panel-group am-margin-vertical-sm" id="accordion" style="font-size:14px;margin-top:-60px">
+        <div class="am-panel am-padding-horizontal-sm">
+            <div class="am-panel-hd am-padding-left-0 am-padding-right-0">
+                <!-- itemID 绑定在 h4 这个元素上 ，按自己要求修改，或者绑定其他任何值都可以 -->
+                <h4 class="am-panel-title" data-am-collapse="{parent: '#accordion', target: '#product-details'}" data-itemid="537350500909">
+                    商品图文详情<span class="am-text-primary am-text-xs" style="font-size:14px">（点击展开）</span>
+                    <i class="am-icon-angle-right am-fr am-icon-sm" id="change_icon"></i>
+                </h4>
+            </div>
+            <div id="product-details" class="am-panel-collapse am-collapse">
+                <div class="am-panel-bd am-padding-0" style="border-top: 0">
+                    <div class="am-tab-panel am-fade am-in am-active">
+                        <div class="am-padding-top-sm" style="width:100%;overflow:auto;">
+                            <!-- 如果有异步写入的内容，会覆盖在这里，页面写死的内容也会被覆盖 -->
+                            写死的内容都可以放在这里
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / 商品图文详情 -->
+
+    <!-- 连接按钮 -->
+    <div>
+        <div class="ant">
+            <button type="button" class="am-btn am-btn-danger am-btn-block am-round am-btn-xs cs-btn" id="testOs">判断IOS or Android</button>
+        </div>
+
+        <div class="ant">
+            <button type="button" class="am-btn am-btn-primary am-btn-block am-round am-btn-xs cs-btn">蓝色按钮</button>
+        </div>
+
+        <div class="ant">
+            <button type="button" class="am-btn am-btn-success am-btn-block am-round am-btn-xs cs-btn">绿色按钮</button>
+        </div>
+    </div>
+    <!-- / 连接按钮 -->
+
+    <!-- 优惠券二维码区域 -->
+    <div class="titleall" style="line-height:26px;padding:3% 0px;">
+        <p class="title">长按下方二维码更多惊喜</p>
+        <p class="title" style="color:Red;">获取更多优惠券</p>
+    </div>
+    <div class="s11img">
+        <img src="http://www.wxy99.com/weiqing/attachment/qrcode_121.jpg?time=1487123396" style="width:70%"/>
+    </div>
+    <!-- / 优惠券二维码区域 -->
+
+    <!-- 活动说明 -->
+    <div class="titleall">
+        <span class="line" style="padding-bottom:5px"></span>
+        <span class="title">活动说明</span>
+    </div>
+    <div class="mes">
+        <ol>
+            <li>点击“复制淘口令”按钮，拷贝淘口令 &gt;打开手淘 &gt; 粘贴淘口令 &gt; 成功领取优惠券后，购买商品时使用，即可享受优惠。</li>
+            <li>在手机淘宝-我的淘宝-卡券包-网店优惠券，可查询已发放到账户的优惠券。</li>
+            <li>因商品参与其它活动等原因，付款时优惠券可能无法使用，此时商品最终成交价以您实际付款时提示金额为准。</li>
+            <li>获取、使用优惠券时如存在违规行为（作弊领取、恶意套现、刷取信誉、虚假交易等），淘宝将取消用户领取资格、撤销违规交易且收回全部优惠券（含已使用及未使用的），必要时追究法律责任。</li>
+        </ol>
+    </div>
+    <!-- / 活动说明 -->
+
+    <!-- 规则 -->
+    <div class="titleall">
+        <span class="line"></span>
+        <span class="title">规则声明</span>
+    </div>
+    <div class="mes">
+        <p>上传至该页面的商品与优惠券信息，会被阿里集团官方收录并给其他用户使用。上传者上传此类信息的，表明上传者已与商家达成一致，即商家同意官方收录且给其他用户使用。如商家不同意，请上传者不要上传，如否导致的纠纷由上传者解决并承担责任。</p>
+    </div>
+    <!-- / 规则 -->
+
+    <!-- 点击优惠券的弹框 -->
+    <div class="yhq_nb" style="display:none" id="taokouling">
+        <div class="yhq_nb_title">复制优惠券</div>
+        <div class="yhq_nb_mes">
+            <div class="share" style="display:none;position:fixed;top:-2000px">立省30元，券后109.60元，复制这条信息，打开手机淘宝￥f6CWRyKpBH￥即可领取优惠券</div>
+            <div class="share_content" id="share_content"></div>
+            <span id="copy_key_ios" style="color:#f40" class="sharebtn" data-taowords="￥f6CWRyKpBH￥">立省30元，券后109.60元，复制这条信息，打开手机淘宝￥f6CWRyKpBH￥即可领取优惠券</span>
+            <textarea rows=4 style="font-size:13px;color:#f40;display: none;ime-mode: disabled;overflow-y:visible;height:100%;" id="copy_key_android" type="text" class="am-form-field am-text-center am-text-mss pt10 sharebtn" data-taowords="￥f6CWRyKpBH￥">立省30元，券后109.60元，复制这条信息，打开手机淘宝￥f6CWRyKpBH￥即可领取优惠券</textarea>
+        </div>
+
+        <div class="copy_taowords">
+            <div class="share_content" id="share_content"></div>
+            <p style="text-align: center">
+                <!-- 一键复制 -->
+                <a class="share" style="background: #f54d23; color: white;height:20px;width:200px;font-size:16px;padding:10px 30px; border-radius: 10px" data-taowords="￥f6CWRyKpBH￥" onclick="">一键复制</a>
+            </p>
+        </div>
+
+        <div class="yhq_nb_mes_bo">复制后请记得打开手机淘宝哦</div>
+    </div>
+    <!-- / 点击优惠券的弹框 -->
+</div>
+
+<div class="fc_share"><img src="../addons/bsht_tbk/res/images/share_tip.png" style="width:80%"/></div>
+<div class="fc_share_bg"></div>
+
+<div id="back_top" class="slide-box" style="position:fixed;bottom:50px;right:20px;z-index:100019;display:none"><a href="javascript:scroll(0,0)" title="返回顶部" style="width:44px;"><img src="../addons/bsht_tbk/res/static/jwap/images/back-top.png" style="width:44px;"/></a></div>
+
+<script type="text/javascript" src="../addons/bsht_tbk/res/js/jquery.min.js"></script>
+<script type="text/javascript" src="../addons/bsht_tbk/res/js/jquery.qrcode.min.js"></script>
+<script type="text/javascript" src="../addons/bsht_tbk/res/js/layer-m/layer.js"></script>
+<script type="text/javascript" src="../addons/bsht_tbk/res/js/amazeui.min.js"></script>
+<script type="text/javascript" src="//cdn.bootcss.com/clipboard.js/1.5.15/clipboard.min.js"></script>
+<script type="text/javascript" src="../addons/bsht_tbk/res/js/fastclick.min.js"></script>
+<script>
+    var sharepicmain = "<div id='allsharepic' class='sharepicw100' onclick='javascript:layer.closeAll();'><div class='sharepicw100 sharepictitle'>@ 铅山嬉嬉TV</div><div class='sharepicw100'><img id='startpic' src='http://img.alicdn.com/imgextra/i2/2937652016/TB2XBSzXBLzQeBjSZFjXXcscpXa_!!2937652016.jpg' class='sharepicw100'></div><div class='sharepicw35 sharepicfl qrcodediv' id='qrcodediv'></div><div class='sharepicw60 sharepicfl sharepicpd6'><span class='sharepicw100 sharepicspan1'><b>美国进口 卡夫旗下Planters绅士牌零食组合 混合坚果仁233g*2罐</b></span><span class='sharepicw100 sharepicspan2' style='text-decoration:line-through;color:#666'><small>原价：139.60</small></span><span class='sharepicw100 sharepicspan2'><b>券后价：109.60</b></span></div></div><div class='sharepicw100 sharepicfl sharepicdivbot'>截屏保存后推荐给朋友</div>";
+
+    function sharepic() {
+        layer.open({
+            type: 2,
+            time: 0.4,
+            end: function () {
+                layer.open({
+                    content: sharepicmain,
+                    btn: '关闭'
+                });
+                aysQrcode();
+            }
+        });
+    }
+
+    // 动态二维码
+    function aysQrcode () {
+        $('#qrcodediv').qrcode({
+            render: "canvas",//也可以替换为table
+            width: 80,
+            height: 80,
+            text: "http://www.wxy99.com/weiqing/app/index.php?i=121&c=entry&id=384855&do=show_all&m=bsht_tbk",
+            correctLevel: 1,
+            typeNumber: -1,
+        });
+    }
+    /*
+        * usage about os
+        * os().isIphone ==> true or false
+        * 如果是iphone 输出 true
+    */
+    function os () {
+        var ua = navigator.userAgent,
+            isWindowsPhone = /(?:Windows Phone)/.test(ua),
+            isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone,
+            isAndroid = /(?:Android)/.test(ua),
+            isFireFox = /(?:Firefox)/.test(ua),
+            isChrome = /(?:Chrome|CriOS)/.test(ua),
+            isTablet = /(?:iPad|PlayBook)/.test(ua) || (isAndroid && !/(?:Mobile)/.test(ua)) || (isFireFox && /(?:Tablet)/.test(ua)),
+            isIphone = /(?:iPhone)/.test(ua) && !isTablet,
+            isPc = !isIphone && !isAndroid && !isSymbian,
+            isWeiXin = /(?:MicroMessenger)/.test(ua);
+        return {
+            isTablet: isTablet,
+            isIphone: isIphone,
+            isAndroid : isAndroid,
+            isPc : isPc,
+            isWeiXin : isWeiXin
+        };
+    }
+
+    function showfxtip() {
+        $('.fc_share').show();
+        $('.fc_share_bg').show();
+    }
+    function showthistkl(_flag) {
+        if (_flag == 0) {
+            // $('.yhq_nb_mes_bo').html('');
+        } else {
+            //$('.yhq_nb_mes_bo').html('');
+        }
+        $('.yhq_nb').show();
+        $('.fc_share_bg').show();
+    }
+    function hidethistkl() {
+        $('.yhq_nb').hide();
+        $('.fc_share_bg').hide();
+    }
+
+
+    $(function () {
+        function setRootFontSize () {
+            $('html').css('font-size', document.body.clientWidth / 15 + 'px');
+        }
+
+        // start fastclick
+        FastClick.attach(document.body);
+
+        // setRootFontSize
+        setRootFontSize();
+
+        // resize reset fontsize
+        $(window).on('resize', setRootFontSize);
+
+        // back top
+        $(window).on('scroll', function () {
+            var allheight = window.screen.height;
+            document.getElementById("back_top").style.display = (document.documentElement.scrollTop + document.body.scrollTop > 300) ? "block" : "none";
+        });
+
+        // toggle tips
+        $('.fc_share_bg').on('click', function () {
+            $('.fc_share').hide();
+            $('.fc_share_bg').hide();
+            $('.yhq_nb').hide();
+        });
+        $('.fc_share').on('click', function () {
+            $('.fc_share').hide();
+            $('.fc_share_bg').hide();
+        });
+
+        // 通过ueragent 判断复制框
+        if (os().isIphone || os().isTablet) {
+            // 是iphone 或 ipad
+            $('.yhq_nb_title').html("长按框内文字 > 拷贝");
+        } else {
+            $("#copy_key_ios").hide();
+            $("#copy_key_android").show();
+        }
+
+        // 商品图文详情点击事件
+        $('.am-panel-title').on('click', function () {
+            //详情显影
+            if ($("#product-details").is(":hidden")) {
+                $("#change_icon").removeClass('am-icon-angle-right').addClass('am-icon-angle-down');
+//            $('.am-tab-panel').html('<span class="am-center am-text-center am-margin-vertical-xs">图片努力加载中<i class="am-icon-spinner am-icon-pulse am-margin-left-xs"></i></span>');
+            } else {
+                $("#change_icon").removeClass('am-icon-angle-down').addClass('am-icon-angle-right');
+            }
+//        如果要异步获取内容，请把'data-itemid'传给 getiteminfo方法
+//        var itemid = $(this).attr('data-itemid');
+//        getiteminfo(itemid);
+        });
+
+        // 异步获取商品图片
+        function getiteminfo(itemid) {
+            $.ajax({
+                url: "https://hws.m.taobao.com/cache/mtop.wdetail.getItemDescx/4.1/?data=%7Bitem_num_id%3A" + itemid + "%7D&type=jsonp&dataType=jsonp",
+                dataType: 'jsonp',
+                jsonp: 'callback',
+                success: function (result) {
+                    if (result.ret[0] == "SUCCESS::接口调用成功") {
+                        var len = result.data.images.length;
+                        var image = new Array();
+                        for (var i = 0; i < len; i++) {
+                            image[i] = '<img src="' + result.data.images[i] + '_400x400.jpg">';
+                        }
+                        $('.am-tab-panel').html(image);
+                    } else {
+                        $("#qf_alert_info").html("宝贝数据调用失败，原因：" + result.ret[0]);
+                        $('#qf_alert').modal();
+                    }
+                }
+            });
+        }
+
+        // ios android 弹不同的框
+        $("#testOs").on('click', function () {
+            if (os().isIphone) {
+                // iphone 进这里
+                layer.open({
+                    content: '我是iphone,相关内容在这里'
+                    ,btn: '我知道了'
+                });
+
+            } else if (os().isAndroid) {
+                // android 进这里
+                layer.open({
+                    content: '我是Android,相关内容在这里'
+                    ,btn: '我知道了'
+                });
+            }
+        })
+    });
+</script>
+</body>
+</html>
