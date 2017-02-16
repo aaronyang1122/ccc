@@ -78,7 +78,7 @@
         <div class="am-panel am-padding-horizontal-sm">
             <div class="am-panel-hd am-padding-left-0 am-padding-right-0">
                 <!-- itemID 绑定在 h4 这个元素上 ，按自己要求修改，或者绑定其他任何值都可以 -->
-                <h4 class="am-panel-title" data-am-collapse="{parent: '#accordion', target: '#product-details'}" data-itemid="537350500909">
+                <h4 class="am-panel-title" data-am-collapse="{parent: '#accordion', target: '#product-details'}" data-itemid="536183635914">
                     商品图文详情<span class="am-text-primary am-text-xs" style="font-size:14px">（点击展开）</span>
                     <i class="am-icon-angle-right am-fr am-icon-sm" id="change_icon"></i>
                 </h4>
@@ -304,8 +304,8 @@
                 $("#change_icon").removeClass('am-icon-angle-down').addClass('am-icon-angle-right');
             }
 //        如果要异步获取内容，请把'data-itemid'传给 getiteminfo方法
-//        var itemid = $(this).attr('data-itemid');
-//        getiteminfo(itemid);
+        var itemid = $(this).attr('data-itemid');
+        getiteminfo(itemid);
         });
 
         // 异步获取商品图片
@@ -321,7 +321,7 @@
                         for (var i = 0; i < len; i++) {
                             image[i] = '<img src="' + result.data.images[i] + '_400x400.jpg">';
                         }
-                        $('.am-tab-panel').html(image);
+                        $('.am-tab-panel').html(image.join(''));
                     } else {
                         $("#qf_alert_info").html("宝贝数据调用失败，原因：" + result.ret[0]);
                         $('#qf_alert').modal();
