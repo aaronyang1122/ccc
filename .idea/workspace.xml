@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5c109b5a-eda8-467f-9125-61b48db61840" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addons/bsht_tbk/res/css/show_card.css" afterPath="$PROJECT_DIR$/addons/bsht_tbk/res/css/show_card.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addons/bsht_tbk/res/js/jquery.min.js" afterPath="$PROJECT_DIR$/addons/bsht_tbk/res/js/jquery.min.js" />
     </list>
     <ignored path="ccc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -308,7 +306,7 @@
       <updated>1487124136383</updated>
       <workItem from="1487124137484" duration="21287000" />
       <workItem from="1487224305661" duration="1457000" />
-      <workItem from="1487228418769" duration="202000" />
+      <workItem from="1487228418769" duration="315000" />
     </task>
     <task id="LOCAL-00001" summary="fix image.join()">
       <created>1487224707675</created>
@@ -317,11 +315,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487224707675</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update show_card.css to fix img 100% width">
+      <created>1487228673816</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1487228673816</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22946000" />
+    <option name="totallyTimeSpent" value="23059000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1932" height="1066" extended-state="0" />
@@ -358,7 +363,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix image.join()" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix image.join()" />
+    <MESSAGE value="update show_card.css to fix img 100% width" />
+    <option name="LAST_COMMIT_MESSAGE" value="update show_card.css to fix img 100% width" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
